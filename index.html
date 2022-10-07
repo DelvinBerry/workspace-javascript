@@ -23,23 +23,33 @@
             <p>
                 Please display a hello world message in JavaScript. 
                 <script>
-                    document.title = "JavaScript Basic -- In class practice -- Yilian Zhang";
+                    document.title = "JavaScript Basic -- In class practice -- Delvin Berry";
                     // use document.write to display a message
-                    
+                    document.writeln("<h2>Hello People That Refuse My Existence</h2>")
                     // use console.log to display a message   
-                    
+                    console.log("This is in the console/not in the document.")
                     
                 </script>
             </p>
             <p> Please import external file hello.js here. 
-                
+                <script src="js/hello.js"></script>
             </p>
         </div>
 
         <div class="practice">
             <h1> Variable and Arithemetic Operation</h1>
             <p> Practice on variables </p>
+            <script>
+                var num1=3;
+                var num2=5;
+                var num3=7;
+                var num4=4;
+                var result1=num1 * num4;
+                var result2=num2 + num2;
+                var result3=num4 - num3;
 
+                document.write("It is " + result1);
+            </script>
 
         </div>
 
@@ -47,7 +57,26 @@
             <h1> JavaScript Escape Sequence</h1>
             <p> Write an image to the page </p>
 
+            <script>
+                document.write(" <img src=\"img/die1.png\" alt=\"dies\">");
+                document.write("img src=\"img/die2.png\"alt=\"dies\">");
+                imglist = ""
+                for(var i=1; i<7; i++){
+                imglist =imglist + "img src =\"img/die"+i+".png\">";
+                }
+                document.write(imglist);
+            </script>
             <p> Write a table to the page </p>
+            <script>
+                var tablecode="<table>";
+                    for(var i = 1; i<10; i++){
+                        tablecode = tablecode + "<tr> <td>" +i+"</td> </tr>";
+                    }
+                    tablecode = tablecode +"</table>";
+                    document.write(tablecode);
+
+            </script>
+
 
         </div>
 
