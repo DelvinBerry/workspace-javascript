@@ -449,8 +449,11 @@
                 </table>
 
                 <script>
+                    var stats=[0,0,0,0,0,0];
                     function changeimage(){
                         var num = Math.floor(Math.random()*6+1);
+                        stats[num-1]++;
+                        console.log(stats);
                         document.getElementById('dice').setAttribute('src',"img/die"+num+".png");
                     }
                     document.getElementById('roll').addEventListener('click',changeimage,false);
