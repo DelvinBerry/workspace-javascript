@@ -191,7 +191,7 @@
                     console.log("num=" * num);
                     var sqrs = num * num
                     document.getElementById('result1').textContent = "The number is" + sqrs;
-                    if(Number.isNaN(Number.parseFloat(num))){
+                    if (Number.isNaN(Number.parseFloat(num))) {
                         window.alert("Can you count??")
                     }
 
@@ -216,13 +216,13 @@
             <div id="message1">
             </div>
             <script>
-                function doit(){
+                function doit() {
                     var codes = document.getElementById('code').value;
                     document.getElementById('message1').innerHTML = codes;
                 }
 
                 var bE = document.getElementById('tryit');
-                bE.addEventListener('click',doit,false);
+                bE.addEventListener('click', doit, false);
 
             </script>
 
@@ -241,33 +241,34 @@
                 <select id="condition">
                     <option> Fair</option>
                     <option> Good</option>
-                </select>.</p>
+                </select>.
+            </p>
 
             <p id="price">
 
             </p>
 
             <script type="text/javascript">
-                function getprice(){
+                function getprice() {
                     var yearCar = document.getElementById('year').value;
                     var condCar = document.getElementById('condition').value;
                     var price = 0
 
-                    if (yearCar == "2003" && condCar=="Good"){
+                    if (yearCar == "2003" && condCar == "Good") {
                         price = 5000;
-                    }else if(yearCar=="2004" && condCar=="Good"){
+                    } else if (yearCar == "2004" && condCar == "Good") {
                         price = 5500;
-                    }else if(yearCar=="2003" && condCar=="Fair"){
+                    } else if (yearCar == "2003" && condCar == "Fair") {
                         price = 4500;
-                    }else if(yearCar=="2004" && condCar=="Fair"){
+                    } else if (yearCar == "2004" && condCar == "Fair") {
                         price = 4700;
                     }
-                        
+
 
                     document.getElementById('price').textContent.toString();
                 }
-                document.getElementById('year').addEventListener('change',getprice,false);
-               
+                document.getElementById('year').addEventListener('change', getprice, false);
+
 
             </script>
 
@@ -279,30 +280,30 @@
                 <input type="text" id="theme">
             </p>
             <script>
-                function Changetheme(){
+                function Changetheme() {
                     let theme = document.querySelector('#theme').value;
-                    let bcolor="white";
+                    let bcolor = "white";
 
                     switch (theme) {
                         case "warm":
-                            bcolor="gold";
+                            bcolor = "gold";
                             break;
                         case "hot":
-                            bcolor="red";
+                            bcolor = "red";
                             break;
                         case "cool":
-                            bcolor="blue"; 
-                            break;  
+                            bcolor = "blue";
+                            break;
                         default:
-                            bcolor="white"
+                            bcolor = "white"
                             break;
                     }
                     //old
-                   // document.body.style.backgroundColor = bcolor;
+                    // document.body.style.backgroundColor = bcolor;
                     //new
-                    document.body.setAttribute('style',"background-color:"+bcolor);
+                    document.body.setAttribute('style', "background-color:" + bcolor);
                 }
-        document.querySelector('#theme').addEventListener('blur',Changetheme,false);
+                document.querySelector('#theme').addEventListener('blur', Changetheme, false);
             </script>
 
         </div>
@@ -334,14 +335,14 @@
 
             </p>
             <script>
-                function getpremium(){
+                function getpremium() {
                     var rE = document.querySelector('input[name="coverage"]:checked');
                     var coverage = parseInt(rE.value);
                     console.log(coverage);
                 }
 
-                var bE=document.querySelector('input[value="Check Premium"]');
-                bE.addEventListener('click',getpremium,false);
+                var bE = document.querySelector('input[value="Check Premium"]');
+                bE.addEventListener('click', getpremium, false);
 
 
 
@@ -359,6 +360,13 @@
                 <input type="button" value="Click for Square">
             </p>
 
+            <script>
+
+
+
+
+            </script>
+
         </div>
 
 
@@ -367,137 +375,165 @@
             <!--  Input number box -->
             <p> N = <input type="number" min="1" max="10" id="inputnumber2"> </p>
             <p>
-                <input type="button" value="Click for multiplication table">
+                <input type="button" id="showtable" value="Click for multiplication table">
             </p>
 
             <!-- output section -->
             <div id="output">
 
-
-            </div>
-
-        </div>
-
-
-        <div class="practice">
-            <h1>For loop practice 3 -Math Drill </h1>
-            <p> N = <input type="number" min="1" max="10" id="inputnumber3"> </p>
-
-            <p>
-                <input type="button" value="Click for multiplication drill">
-            </p>
-            <script src="js\mathdrill.js">
-            </script>
-        </div>
-
-        <div class="practice">
-            <h1> A simple JavaScript Quiz</h1>
-            <p> A simple JavaScript Quiz </p>
-            <p>Target: Generate a simple substract and add problems using JavaScript and then check the answers</p>
-            <a href="quiz1.html">Do your practice in quiz1.html</a>
-        </div>
-
-        <div class="practice">
-            <h1>Change Attribute -- Rolling a dice </h1>
-            <p> <input type="button" id="roll" value="roll" /> </p>
-            <p> <img src="img/die1.png"> </p>
-            <table>
-                <tr>
-                    <th>Result</th>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>3</th>
-                    <th>4</th>
-                    <th>5</th>
-                    <th>6</th>
-                </tr>
-                <tr>
-                    <th>Statistics</th>
-                    <td id="r1"></td>
-                    <td id="r2"></td>
-                    <td id="r3"></td>
-                    <td id="r4"></td>
-                    <td id="r5"></td>
-                    <td id="r6"></td>
-                </tr>
-            </table>
-
-        </div>
-
-
-        <div class="practice">
-            <h1> Array example - Image banner</h1>
-            <div class="img-container-hide">
-                <img src="img/usca1.jpg" alt="usca" />
-            </div>
-            <div class="img-container-hide">
-                <img src="img/usca2.jpg" alt="usca" />
-            </div>
-            <div class="img-container-hide">
-                <img src="img/usca3.jpg" alt="usca" />
-            </div>
-            <div class="img-container-hide">
-                <img src="img/usca4.jpg" alt="usca">
-            </div>
-            <div class="img-container-hide">
-                <img src="img/usca5.jpg" alt="usca">
             </div>
             <script>
+                function showMult() {
+                    var outputlist = "<table>";
+                    var N = 8;
+                    for (var i = 1; i <= N; i++) {
+                        outputlist += "<tr>";
+                        for (var j = i; j <= N; j++) {
+                            outputlist += "<td>";
+                                var ans = i * j;
+                                outputlist += " "+i+"x"+j+"="+ans;
+                            outputlist += "</td>";
+                        }
+                        outputlist += "</tr>";
+                    }
+                    outputlist += "</talbe>";
+                    document.getElementById('output').innerHTML = outputlist;
+                }
 
+
+
+                document.getElementById('showtable').addEventListener('click', showMult, false)
             </script>
 
+            <div class="practice">
+                <h1>For loop practice 3 -Math Drill </h1>
+                <p> N = <input type="number" min="1" max="10" id="inputnumber3"> </p>
 
-        </div>
-
-
-        <div class="practice">
-            <h1>JavaScript Object </h1>
-            <p> Hotel registration </p>
-            <div>
-                <form>
-                    <p>
-                        Name: <input type="text" id="name">
-                    </p>
-                    <p>
-                        Check in: <input type="date" id="checkin"> Check out: <input type="date" id="checkout">
-                    </p>
-                    <p>
-                        Number of guest: <input type="number" id="num" min="0" max="5">
-                    </p>
-                    <p>
-                        Room Type: <select id="room">
-                            <option>1 Bedroom Smaller Suite $139 </option>
-                            <option> 1 Bedroom Larger Suite $169 </option>
-                            <option> 1 Bedroom Junior Suite $289</option>
-                            <option> Grand Suite $289</option>
-                        </select>
-                    </p>
-                    <p>
-                        <input id="submit" type="button" value="submit">
-                    </p>
-                    <p>
-                        <input id="lists" type="button" value="List current reservations">
-                    </p>
-                </form>
-                <script src="js/hotel.js"></script>
+                <p>
+                    <input type="button" value="Click for multiplication drill">
+                </p>
+                <script src="js\mathdrill.js">
+                </script>
             </div>
 
+            <div class="practice">
+                <h1> A simple JavaScript Quiz</h1>
+                <p> A simple JavaScript Quiz </p>
+                <p>Target: Generate a simple substract and add problems using JavaScript and then check the answers</p>
+                <a href="quiz1.html">Do your practice in quiz1.html</a>
+            </div>
+
+            <div class="practice">
+                <h1>Change Attribute -- Rolling a dice </h1>
+                <p> <input type="button" id="roll" value="roll" /> </p>
+                <p> <img id="dice" src="img/die1.png"> </p>
+                <table>
+                    <tr>
+                        <th>Result</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                    </tr>
+                    <tr>
+                        <th>Statistics</th>
+                        <td id="r1"></td>
+                        <td id="r2"></td>
+                        <td id="r3"></td>
+                        <td id="r4"></td>
+                        <td id="r5"></td>
+                        <td id="r6"></td>
+                    </tr>
+                </table>
+
+                <script>
+                    function changeimage(){
+                        var num = Math.floor(Math.random()*6+1);
+                        document.getElementById('dice').setAttribute('src',"img/die"+num+".png");
+                    }
+                    document.getElementById('roll').addEventListener('click',changeimage,false);
+
+
+                </script>
+
+            </div>
+
+
+            <div class="practice">
+                <h1> Array example - Image banner</h1>
+                <div class="img-container-hide">
+                    <img src="img/usca1.jpg" alt="usca" />
+                </div>
+                <div class="img-container-hide">
+                    <img src="img/usca2.jpg" alt="usca" />
+                </div>
+                <div class="img-container-hide">
+                    <img src="img/usca3.jpg" alt="usca" />
+                </div>
+                <div class="img-container-hide">
+                    <img src="img/usca4.jpg" alt="usca">
+                </div>
+                <div class="img-container-hide">
+                    <img src="img/usca5.jpg" alt="usca">
+                </div>
+                <script>
+
+                </script>
+
+
+            </div>
+
+
+            <div class="practice">
+                <h1>JavaScript Object </h1>
+                <p> Hotel registration </p>
+                <div>
+                    <form>
+                        <p>
+                            Name: <input type="text" id="name">
+                        </p>
+                        <p>
+                            Check in: <input type="date" id="checkin"> Check out: <input type="date" id="checkout">
+                        </p>
+                        <p>
+                            Number of guest: <input type="number" id="num" min="0" max="5">
+                        </p>
+                        <p>
+                            Room Type: <select id="room">
+                                <option>1 Bedroom Smaller Suite $139 </option>
+                                <option> 1 Bedroom Larger Suite $169 </option>
+                                <option> 1 Bedroom Junior Suite $289</option>
+                                <option> Grand Suite $289</option>
+                            </select>
+                        </p>
+                        <p>
+                            <input id="submit" type="button" value="submit">
+                        </p>
+                        <p>
+                            <input id="lists" type="button" value="List current reservations">
+                        </p>
+                    </form>
+                    <script src="js/hotel.js"></script>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="practice">
+                <h1>Continue other practices</h1>
+                <a href="JSON.html">JSON Practice</a>
+                <a href="element.html"> Element Practice </a>
+            </div>
+
+
+
         </div>
-
-
-
-
-        <div class="practice">
-            <h1>Continue other practices</h1>
-            <a href="JSON.html">JSON Practice</a>
-            <a href="element.html"> Element Practice </a>
-        </div>
-
-
-
-    </div>
-    <script src="script.js"> </script>
-    <script src="js/practice.js"></script>
+        <script src="script.js"> </script>
+        <script src="js/practice.js"></script>
 
 
 </body>
