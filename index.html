@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/main-old.css">
     <!-- Jquery library   ---->
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -453,8 +453,14 @@
                     function changeimage(){
                         var num = Math.floor(Math.random()*6+1);
                         stats[num-1]++;
-                        console.log(stats);
+                        
                         document.getElementById('dice').setAttribute('src',"img/die"+num+".png");
+                        for (var i in stats){
+                            console.log(stats[i]);
+                        }
+                        document.getElementById('r1').textContent=stats[0].toString();
+
+
                     }
                     document.getElementById('roll').addEventListener('click',changeimage,false);
 
@@ -481,7 +487,18 @@
                 <div class="img-container-hide">
                     <img src="img/usca5.jpg" alt="usca">
                 </div>
-                <script>
+                <script>                    
+                setInterval(changpic,5000);
+                    var index = 0;
+                    var imglist = document.querySelectorAll(".img-container-hide");
+                    imglist[0].setAttribute('class',"img-container");
+                function changepic(){
+                    imglist[index].setAttribute("class","img-container-hide");
+                    index++;
+                    index = index %imglist.length;
+
+                    imglist[index].setAttribute('class',"img-container");
+                }
 
                 </script>
 
